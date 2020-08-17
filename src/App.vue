@@ -1,28 +1,29 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <MainWrapper />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import MainWrapper from '@/components/MainWrapper.vue';
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
-}
+    MainWrapper,
+  },
+  data() {
+    return {
+      title: 'Vue SHOP',
+    };
+  },
+};
 </script>
 
 <style lang="scss">
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+    'Helvetica Neue', sans-serif;
+  margin-top: 50px;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
