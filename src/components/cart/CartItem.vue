@@ -12,11 +12,23 @@
     </div>
     <div class="cart-item__quantity">
       <p>Quantity</p>
-      <span class="quantity__btn" @click="decrementItem">-</span>
-      {{ cart_item_data.quantity }}
-      <span class="quantity__btn" @click="incrementItem">+</span>
+      <div class="cart-item__quantity__inc_dec">
+        <i class="material-icons" @click="decrementItem">
+          remove
+        </i>
+        <div class="cart-item__quantity__value">
+          {{ cart_item_data.quantity }}
+        </div>
+        <i class="material-icons" @click="incrementItem">
+          add
+        </i>
+      </div>
     </div>
-    <button class="btn" @click="deleteFromCart">delete</button>
+    <button class="btn" @click="deleteFromCart">
+      <i class="material-icons" @click="deleteFromCart">
+        delete_forever
+      </i>
+    </button>
   </div>
 </template>
 
@@ -56,8 +68,20 @@ export default {
   &__img {
     width: 50px;
   }
-
-  .quantity__btn {
+  &__quantity {
+    &__inc_dec {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    &__value {
+      font-size: 20px;
+    }
+    &__btn {
+      cursor: pointer;
+    }
+  }
+  i {
     cursor: pointer;
   }
 }

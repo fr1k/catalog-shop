@@ -1,7 +1,9 @@
 <template>
   <div class="cart">
     <router-link :to="{ name: 'catalog' }">
-      <div class="cart__link_to_cart">Back to catalog</div>
+      <div class="cart__link_to_catalog">
+        Back to catalog<i class="material-icons">shopping_cart</i>
+      </div>
     </router-link>
     <h1>Cart</h1>
     <p v-if="!cart_data.length">There are no products in cart...</p>
@@ -73,10 +75,13 @@ export default {
 
 <style lang="scss">
 .cart {
-  &__link_to_cart {
+  &__link_to_catalog {
     position: absolute;
     top: 10px;
     right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: $padding;
     border: 1px solid black;
   }

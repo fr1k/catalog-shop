@@ -6,9 +6,17 @@
       :alt="product_data.image"
     />
     <p class="catalog-item__name">{{ product_data.name }}</p>
-    <p class="catalog-item__price">Price: {{ product_data.price }}₽</p>
-    <button class="btn catalog-item__add_to_cart_btn" @click="addToCart">
-      add to cart
+    <p class="catalog-item__price">
+      Price: {{ product_data.price }}₽
+    </p>
+    <button
+      class="btn catalog-item__add_to_cart_btn"
+      @click="addToCart"
+    >
+      <i class="material-icons">
+        add_shopping_cart
+      </i>
+      Add
     </button>
   </div>
 </template>
